@@ -8,5 +8,3 @@ func Pledge(promises string, paths []string) error {
 	_, err := C.pledge(C.CString(promises), nil)
 	return err
 }
-
-
