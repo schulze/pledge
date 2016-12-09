@@ -8,7 +8,7 @@ import (
 
 func TestMain(t *testing.T) {
 	// We need to do the equivalent of "ulimit -c 0" , so that we don't litter the directory with core dumps.
-	syscall.Setrlimit(syscall.RLIMIT_CORE, &syscall.Rlimit{0, 0})
+	syscall.Setrlimit(syscall.RLIMIT_CORE, &syscall.Rlimit{Cur: 0, Max: 0})
 }
 
 type test struct {
